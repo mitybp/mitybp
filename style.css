@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+    --bg: #fff;
+    --invert: #000;
+    --contrast: #333;
+    --primary: #3d86e0;
+    --secondary: #6ee28d;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui;
+}
+
+body{
+    background-color: var(--bg);
+}
+button.toggleTheme {
+    box-shadow: var(--primary) 0 0 15px;
+    background-color: var(--contrast);
+    color: var(--bg);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+header{
+    margin: 160px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--invert);
+}
+header img{
+    width: 100px;
+}
+
+
+
+main{
+    margin: 0 20%;
+    display: flex;
+    justify-content: space-evenly;
+}
+main a{
+    color: var(--invert);
+    font-size: 2rem;
+    text-decoration: none;
+}
+main a:hover{
+    color: var(--contrast);
+    transition: 0.2s;
+}
+
+@media (max-width: 600px) {
+    main{
+        margin: 0 10%;
+    }
+    header p:nth-child(2){
+        display: block;
+    }
+    header p:nth-child(1){
+        display: none;
+    }
+}
